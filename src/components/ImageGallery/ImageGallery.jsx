@@ -37,8 +37,7 @@ export class Gallery extends Component {
   }
 
   getPage = async () => {
-    const { query } = this.props;
-    const { page } = this.state;
+    const { page, query } = this.state;
     this.setState({ isLoading: true });
     try {
       const data = await fetchImg(query, page);
